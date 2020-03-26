@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+
+    <!-- {# Custom CSS#} -->
+    <link rel="stylesheet" href="{% static 'portfolio/css/style_v2.css' %}">
+    <title>Sumit Dey|portfolio</title>
+</head>
+<body>
+
+{% block head_card %}
+{% endblock head_card %}
+
+{% block intro %}
+{% endblock intro %}
+
+{% block project %}
+{% endblock project %}
+
+{% block skill %}
+{% endblock skill %}
+
+{% block contact %}
+
+{% endblock contact %}
+
+{% block scrollspy %}
+<div class="dotted-scrollspy clearfix d-none d-sm-block">
+    <ul class="nav smooth-scroll flex-column">
+        <li class="nav-item"><a class="nav-link" href="#home"><span></span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#about"><span></span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#services"><span></span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio"><span></span></a></li>
+        <li class="nav-item"><a class="nav-link active" href="#contact"><span></span></a></li>
+    </ul>
+</div>
+{% endblock %}
+
+<script src="{% static './portfolio/js/animation.js' %} " charset="utf-8">
+</script>
+
+<script src="{% static './portfolio/js/custom.js' %} " charset="utf-8">
+</script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+</body>
+</html>

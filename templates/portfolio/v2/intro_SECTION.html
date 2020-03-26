@@ -1,0 +1,36 @@
+{% extends 'portfolio/v2/head_card_SECTION.html' %}
+{% load static %}
+{% block intro %}
+<section>
+    <div id="intro" class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 intro-content">
+            <div>
+              Welcome to my portfolio
+            </div>
+            <div class="typo_intro">
+              <h1>Hey folks, I'm &nbsp;<span class="txt-rotate" data-period="2000" data-rotate='[ "Sumit Dey", "A Designer", "A Geek"]'></span></h1>
+                <!-- <span class="name">Sumit</span></h1> -->
+            </div>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui vel non, sequi sunt voluptatum molestias consequatur itaque nostrum eveniet rem.
+            </p>
+            <button class="btn btn-primary"><i class="fas fa-code mr-1"></i> resume</button>
+            <button class="btn btn-default btn-rounded">Get a quote <i class="fas fa-magic ml-1"></i></button>
+          </div>
+          <div class="col-lg-6 text_align mt_80">
+            <div class="image_area">
+              <img src="{% static 'portfolio/images/undraw_feeling.svg' %}" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PROJECT -->
+    <hr>
+    <hr />
+    <!-- carousel -->
+</section>
+
+{% endblock intro%}

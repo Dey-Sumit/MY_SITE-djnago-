@@ -1,0 +1,97 @@
+{% extends 'portfolio/v2/skills_SECTION.html' %}
+{% load static %}
+{% block contact %}
+<hr>
+<hr>
+<section>
+    <div class="container mt_80">
+        <div class="row">
+
+            <div class="col-lg-7 col-12">
+                <div class="contact-form">
+                    <h2> Hey Bruh,Thanks for visiting me :) </h2>
+                    <h4>Please Leave a message :)</h4>
+                    <form method="POST" name="Message" class="mt-20">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6 col-12 mb-10">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" id="name"
+                                       required="">
+                            </div>
+                            <div class="col-lg-6 col-12 mb-10">
+                                <input type="email" class="form-control" name="email"
+                                       placeholder="Email ( if you wish :) )" id="email"
+                                >
+                                <small id="emailHelp2" class="form-text">I'll never share your email with
+                                    anyone.</small>
+                            </div>
+                            <div class="col-12 mb-10">
+                                <textarea name="message" rows="6" class="form-control" id="message"
+                                          placeholder="Message" required="" spellcheck="false"></textarea>
+                            </div>
+                            <div class="ml-lg-auto col-lg-5 col-12 mb-10">
+                                <input type="submit" class="form-control submit-btn" value="Okay! submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+
+                    {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    <div class="alert alert-dark" role="alert" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                    </div>
+
+                    {% endfor %}
+
+                </ul>
+                {% endif %}
+            </div>
+            <div class="col-lg-1 col-12"></div>
+            <div class="col-lg-4 col-12">
+                <h2>Check out my blogs</h2>
+                <!--Card-->
+                <div class="card testimonial-card mt-2 mb-3">
+
+                    <!-- Background color -->
+                    <div class="card-up aqua-gradient" style="
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+ "></div>
+
+                    <!-- Avatar -->
+                    <div class="avatar mx-auto white" style="
+    margin-top: -80px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+">
+                        <img src=" {% static 'portfolio/images/max.jpg' %}" class="rounded-circle img-responsive"
+                             style="width: 120px;" alt="sumit avatar">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="card-body">
+                        <!-- Name -->
+                        <h4 class="card-title font-weight-bold">Sumit Dey</h4>
+                        <hr>
+                        <!-- Quotation -->
+                        <p><i class="fas fa-quote-left"></i> Hey Sumit Here , Give a look at my (not so good) blogs &nbsp &nbsp &nbsp   :(</p>
+                    </div>
+
+<!--                    <button class="btn aqua-gradient">Sure!</button>-->
+                    <a target="_blank" href="/blog"
+                                       class="btn aqua-gradient btn-lg btn-rounded">Sure!</a>
+
+                </div>
+                <!--Card-->
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contact %}

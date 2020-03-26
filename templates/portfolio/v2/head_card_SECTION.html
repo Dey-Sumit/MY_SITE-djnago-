@@ -1,0 +1,27 @@
+{% extends 'portfolio/v2/base_v2.html' %}
+{% load static %}
+{% block head_card %}
+
+<!--head_card-->
+<section class="header">
+    <div class="card bg-light">
+      <div class="card-body">
+         <div class="avatar white">
+                        <img src=" {% static 'portfolio/images/max.jpg' %}" class="rounded-circle img-responsive"
+                             style="width: 80px;" alt="sumit avatar">
+                    </div>
+        <div class="mx-40" style="
+    margin: 0 45px;
+">
+          <h5 class="card-title">Sumit Dey</h5>
+          <p class="card-text">email id:sumax333@gmail.com</p>
+          <p class="card-text">contact no:854961767</p>
+        </div>
+        <div>
+          <a href="#!" class="btn btn-default btn-rounded">Downlaod CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--head_card-->
+{% endblock %}

@@ -1,0 +1,45 @@
+workon test(env name)
+
+//create a project
+ django-admin startproject mysite
+
+//launch live server:
+python manage.py runserver
+python manage.py runserver 8080
+
+//create app
+python manage.py startapp app1
+
+//basic process
+1.views.py->define the function to render the content
+2.app/urls.py ->map the url in app
+3.project/urls.py->include the path in project url
+
+//templates for dynamic content(DTL)
+ create a templates folder
+ add it to the DIRS in setting.templates
+ create the page(eg index.html) in templates folder
+ views.py->create a function to render it
+ //render(req,'index.html',{key:value})
+  in index.html ,access it using {{key}}
+
+//jinja
+{%   %} idk wtf it is :)
+
+//request methods
+  get: fetch the data
+  post:send data(for form submisson)(* use token to send data)
+
+//MVT
+  model:data
+  view:logic
+  template:layout
+  django->url->(views->model
+                views->template)
+
+//host static files
+create a static directory
+link it to the project->setting.py: STATICFILES_DIRS=[...]
+                    STATIC_ROOT=(it will copy the files of the user created static folder to django static folder)
+ cmd:python manage.py collectstatic
+ put the href links under {% static 'url' %}(except the cdns) and {% load static %} at the top of index.html
