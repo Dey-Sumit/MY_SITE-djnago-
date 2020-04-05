@@ -1,0 +1,20 @@
+body{
+    margin-top:40px;
+    background-color:#496c80;
+    color:#ce9e62;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+display:inline-block;
+}
+.pills-peach-gradient .nav-item .nav-link.active {
+background: linear-gradient(40deg, #FFD86F, #FC6262);
+}
+.cst-blog-header{
+    margin:10px 20px;
+}
+
+.cst-card-body{
+  display: flex;
+  flex-direction: column;
+}
